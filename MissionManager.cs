@@ -4,15 +4,12 @@ using UnityEngine;
 
 public class MissionManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public static MissionManager instance;
+
+    void Awake()
     {
-        
+        instance = this;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    public List<Mission> missionList = new List<Mission>();
 }
