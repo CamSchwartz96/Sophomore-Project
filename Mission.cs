@@ -10,4 +10,8 @@ public class Mission
     public bool missionComplete;
     [Space]
     public bool restartOnNextBall;
+    public bool stopOnBallEnd;
+    public bool resetOnComplete;
+    [Space]
+    public float timeOnComplete;
 }
