@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class MissionManager : MonoBehaviour
 {
-    public static Mission Manager instance;
+    public static MissionManager instance;
 
     bool timeBasedMissionActive;
     
@@ -46,7 +46,7 @@ public class MissionManager : MonoBehaviour
         float tempTime = t;
         while(timeBasedMissionActive && tempTime >0 )
         {
-            yield return new WaitForSeconds(1f)；
+            yield return new WaitForSeconds(1f);
             tempTime -=1;
             Debug.Log(tempTime);
         }
