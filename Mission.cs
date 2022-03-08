@@ -55,9 +55,11 @@ public class Mission
             if(timeToComplete > 0)
             {
                 //STOP TIMER > Mission Manager
+                MissionManager.instance.StopTimer();
             }
 
             ResetMission();
+            Debug.Log("Mission Complete");
         }
     }
 }
