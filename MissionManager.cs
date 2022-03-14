@@ -74,5 +74,10 @@ public class MissionManager : MonoBehaviour
     {
       timeBasedMissionActive = false;  
     }
+
+    public bool CheckIfMissionStarted(int ID)
+    {
+        return missionList.Find(m => m.missionId == ID).GetMissionActive();
+    }
     
 }

@@ -11,24 +11,27 @@ public class Sensor : MonoBehaviour
 
     void OnTriggerEnter(Collider col)
     {
+        bool startedAlready = MissionManager.instance.CheckIfMissionStarted(triggerId);
         if(isStarter)
         {
             MissionManager.instance.StartMission(triggerId);
         }
 
-        if(isCounter)
+        if(isCounter && startedAlready)
         {
             MissionManager.instance.UpdateMission(triggerId);
         }
     }
     void OnCollisionEnter(Collision col)
     {
+        Debug.Log("bumped");
+        bool startedAlready = MissionManager.instance.CheckIfMissionStarted(triggerId);
         if(isStarter)
         {
             MissionManager.instance.StartMission(triggerId);
         }
 
-        if(isCounter)
+        if(isCounter && startedAlready)
         {
             MissionManager.instance.UpdateMission(triggerId);
         }
